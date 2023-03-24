@@ -21,6 +21,8 @@ button3.addEventListener("click", () => {
   open.play();
 });
 
+
+
 let button4 = document.getElementById("button4");
 let kick = document.getElementById("kick");
 
