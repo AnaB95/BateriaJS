@@ -7,4 +7,16 @@ button1.addEventListener("click", () => {
   crash.play();
 });
 
-console.log("hola");
+let button2 = document.getElementById("button2");
+let close = document.getElementById("close");
+
+button2.addEventListener("click", () => {
+  close.play();
+});
+
+let button3 = document.getElementById("button3");
+let open = document.getElementById("open");
+
+button3.addEventListener("click", () => {
+  open.play();
+});
