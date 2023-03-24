@@ -6,3 +6,5 @@ let crash = document.getElementById("crash");
 button1.addEventListener("click", () => {
   crash.play();
 });
+
+console.log("hola");
