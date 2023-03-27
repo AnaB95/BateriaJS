@@ -1,46 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="style.css" rel="stylesheet" />
-    <title>Batería en JavaScript</title>
-  </head>
-  <body>
-    <script src="script.js" type="module"></script>
-    <header>
-      <h1>Batería</h1>
-    </header>
-    <main>
-      <section>
-        <img src="BateriaJS.png" alt="Batería" />
-        <button id="button1">Crash</button>
-        <audio id="crash" src="Sonidos/crash.wav"></audio>
-        <button id="button2">Close</button>
-        <audio id="close" src="Sonidos/hihat-close.wav"></audio>
-        <button id="button3">Open</button>
-        <audio id="open" src="Sonidos/hihat-open.wav"></audio>
-        <button id="button4">Kick</button>
-        <audio id="kick" src="Sonidos/kick.wav"></audio>
-        <button id="button5">Ride</button>
-        <audio id="ride" src="Sonidos/ride.wav"></audio>
-        <button id="button6">Snare</button>
-        <audio id="snare" src="Sonidos/snare.wav"></audio>
-        <button id="button7">Tom-high</button>
-        <audio id="high" src="Sonidos/tom-high.wav"></audio>
-        <button id="button8">Tom-low</button>
-        <audio id="low" src="Sonidos/tom-low.wav"></audio>
-        <button id="button9">Tom-mid</button>
-        <audio id="mid" src="Sonidos/tom-mid.wav"></audio>
-        <button>Grabar</button>
-      </section>
-    </main>
-    <footer>
-      <p>
-        Mónica Irimia, Ignacio Chiacchiera y Ana Belén Bernárdez Martínez para
-        HACK A BOSS en 2023
-      </p>
-    </footer>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="style.css" rel="stylesheet" />
+  <title>Batería en JavaScript</title>
+</head>
+
+<body>
+  <header>
+    <h1>Bateria</h1>
+  </header>
+  <main>
+    <section class="button-contaniner">
+      <img src="BateriaJS.png" alt="Batería">
+      <button class="melody-button" id="Crash" src="Sonidos/crash.wav">Crash</button>
+      <button class="melody-button" id="Close" src="Sonidos/hihat-close.wav">Close</button>
+      <button class="melody-button" id="Open" src="Sonidos/hihat-open.wav">Open</button>
+      <button class="melody-button" id="Kick" src="Sonidos/kick.wav">Kick</button>
+      <button class="melody-button" id="Ride" src="Sonidos/ride.wav">Ride</button>
+      <button class="melody-button" id="Snare" src="Sonidos/snare.wav">Snare</button>
+      <button class="melody-button" id="Tom-high" src="Sonidos/tom-high.wav">Tom-high</button>
+      <button class="melody-button" id="Tom-low" src="Sonidos/tom-low.wav">Tom-low</button>
+      <button class="melody-button" id="Tom-mid" src="Sonidos/tom-mid.wav">Tom-mid</button>
+      <button class="melody-button" id="Grabar">Grabar</button>
+      <audio id="audio"></audio>
+    </section>
+  </main>
+  <footer>
+    <p>
+      Mónica Irimia, Ignacio Chiacchiera y Ana Belén Bernárdez Martínez para HACK A BOSS en 2023
+    </p>
+  </footer>
+
+  <script src="script.js" type="module"></script>
+
+</body>
+
 </html>
+
