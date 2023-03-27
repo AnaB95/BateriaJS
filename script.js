@@ -1,67 +1,59 @@
 "use strict";
 
-let button1 = document.getElementById("button1");
-let crash = document.getElementById("crash");
+//  BOTONES MELODIA
+let melodyButtons = document.querySelectorAll(".melody-button");
 
-button1.addEventListener("click", () => {
-  crash.play();
-});
-
-let button2 = document.getElementById("button2");
-let close = document.getElementById("close");
-
-button2.addEventListener("click", () => {
-  close.play();
-});
-
-let button3 = document.getElementById("button3");
-let open = document.getElementById("open");
-
-button3.addEventListener("click", () => {
-  open.play();
+// Agregar un controlador de eventos onclick a cada botón
+melodyButtons.forEach(function (button) {
+  button.onclick = function () {
+    // Crear un objeto de audio y establecer su propiedad src en la ruta del archivo de sonido correspondiente
+    let audio = new Audio(button.getAttribute("src"));
+    // Reproducir el sonido
+    //metodo setTimeout dos argumentos funcion para ejecutar el retraso y tiempo de retraso
+    setTimeout(function () {
+      audio.play();
+    }, 1000);
+  };
 });
 
 
 
-let button4 = document.getElementById("button4");
-let kick = document.getElementById("kick");
 
-button4.addEventListener("click", () => {
-  kick.play();
+////////////////////////////////////////////////////////////////////////////////
+//EVENTO DE TECLADO
+
+//definimos funcion que toma cadena tecla como entrada
+function reproducirMelodia(tecla) {
+  //crea nuevo audio con la ruta del archivo
+  let audio = new Audio("Sonidos/" + tecla);
+  //play para reproducir el archivo de audio
+  //metodo setTimeout dos argumentos funcion para ejecutar el retraso y tiempo de retraso
+  setTimeout(function () {
+    audio.play();
+  }, 1000);
+  console.log("Estas reproduciendo la melodía de la tecla " + tecla);
+}
+//cuando se presiona una tecla EventListener llama a reproducir la melodia
+document.addEventListener("keydown", function (event) {
+
+  if (event.key.toLowerCase() === "q") {
+    reproducirMelodia("/crash.wav");
+  } else if (event.key.toLowerCase() === "w") {
+    reproducirMelodia("/hihat-close.wav");
+  } else if (event.key.toLowerCase() === "e") {
+    reproducirMelodia("/hihat-open.wav");
+  } else if (event.key.toLowerCase() === "r") {
+    reproducirMelodia("/kick.wav");
+  } else if (event.key.toLowerCase() === "t") {
+    reproducirMelodia("/Ride.wav");
+  } else if (event.key.toLowerCase() === "u") {
+    reproducirMelodia("/Snare.wav");
+  } else if (event.key.toLowerCase() === "i") {
+    reproducirMelodia("/Tom-high.wav");
+  } else if (event.key.toLowerCase() === "o") {
+    reproducirMelodia("/Tom-low.wav");
+  } else if (event.key.toLowerCase() === "p") {
+    reproducirMelodia("/Tom-mid.wav");
+  }
 });
 
-
-let button5 = document.getElementById("button5");
-let ride = document.getElementById("ride");
-
-button5.addEventListener("click", () => {
-  ride.play();
-});
-
-let button6 = document.getElementById("button6");
-let snare = document.getElementById("snare");
-
-button6.addEventListener("click", () => {
-  snare.play();
-});
-
-let button7 = document.getElementById("button7");
-let high = document.getElementById("high");
-
-button7.addEventListener("click", () => {
-  high.play();
-});
-
-let button8 = document.getElementById("button8");
-let low = document.getElementById("low");
-
-button8.addEventListener("click", () => {
-  low.play();
-});
-
-let button9 = document.getElementById("button9");
-let mid = document.getElementById("mid");
-
-button9.addEventListener("click", () => {
-  mid.play();
-});
