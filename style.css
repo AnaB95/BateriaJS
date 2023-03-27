@@ -1,3 +1,5 @@
+@import url(extras.css);
+
 * {
   margin: 0;
   padding: 0;
@@ -6,13 +8,11 @@
 
 body {
   display: grid;
-  grid-template-rows: 5rem 1fr 2rem;
-  height: 100vh;
+  grid-template-rows: 5rem 1fr 4rem;
+  min-height: 100vh;
 }
 
 header {
-  color: red;
-  background-color: aqua;
   grid-row: 1;
   display: flex;
   flex-direction: column;
@@ -21,97 +21,115 @@ header {
 }
 
 main {
-  background-color: green;
-  display: flex;
   grid-row: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   position: relative;
 }
 
 section {
+  border-radius: 3rem;
+  backdrop-filter: blur(5px);
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 80vh;
+  margin: 0 auto;
+  margin: 0.5rem;
 }
 
 img {
-  object-fit: contain;
   width: 100%;
+  display: block;
   height: auto;
-  padding: 2rem;
+  object-fit: cover;
+  padding: 1rem;
+}
+
+.melody-button {
+  position: absolute;
+}
+
+#Crash {
+  top: 7%;
+  left: 20%;
+}
+#Close {
+  top: 60%;
+  left: 15%;
+}
+#Open {
+  top: 23%;
+  left: 10%;
+}
+#Kick {
+  top: 42%;
+  left: 43%;
+}
+#Ride {
+  top: 25%;
+  left: 75%;
+}
+#Snare {
+  top: 35%;
+  left: 27%;
+}
+#Tom-high {
+  top: 20%;
+  left: 35%;
+}
+#Tom-low {
+  top: 20%;
+  left: 50%;
+}
+#Tom-mid {
+  top: 35%;
+  left: 55%;
+}
+#Grabar {
+  top: 3%;
+  left: 50%;
 }
 
 footer {
-  background-color: yellow;
   grid-row: 3;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-/* 
-/
-/
-/
-/
-/
-/
-/
-/
-/
-/
-/
-/
-/
-/
-*/
+footer p {
+  margin: 0 10px;
+}
+
 @media (min-width: 600px) {
   body {
-    display: grid;
-    grid-template-rows: 5rem 1fr 2rem;
+    grid-template-rows: 5rem 1fr 3rem;
     grid-template-columns: 2rem 1fr 2rem;
-    min-height: 100vh;
   }
 
   header {
-    grid-row: 1;
     grid-column: span 3;
-    background-color: red;
-    color: aqua;
   }
 
   main {
-    grid-row: 2;
     grid-column: span 3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    position: relative;
-    background-color: yellow;
   }
 
   section {
-    border-radius: 3rem;
-    backdrop-filter: blur(5px);
-    background-color: blue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0.5rem;
+    width: 80vh;
   }
 
-  img {
-    max-width: 35rem;
-    height: auto;
-    object-fit: cover;
+  .melody-button {
+    position: absolute;
   }
+
   footer {
-    grid-row: 3;
     grid-column: span 3;
-    background-color: green;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 }
