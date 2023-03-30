@@ -1,4 +1,4 @@
-@import url(extras.css);
+@import url(extras/extras.css);
 
 * {
   margin: 0;
@@ -30,7 +30,7 @@ main {
 }
 
 section {
-  border-radius: 3rem;
+  border-radius: 2rem;
   backdrop-filter: blur(5px);
   display: flex;
   justify-content: center;
@@ -38,61 +38,15 @@ section {
   position: relative;
   width: 100%;
   max-width: 80vh;
-  margin: 0 auto;
   margin: 0.5rem;
 }
 
-img {
+#bateria {
   width: 100%;
   display: block;
   height: auto;
   object-fit: cover;
   padding: 1rem;
-}
-
-.melody-button {
-  position: absolute;
-}
-
-#Crash {
-  top: 7%;
-  left: 20%;
-}
-#Close {
-  top: 60%;
-  left: 15%;
-}
-#Open {
-  top: 23%;
-  left: 10%;
-}
-#Kick {
-  top: 42%;
-  left: 43%;
-}
-#Ride {
-  top: 25%;
-  left: 75%;
-}
-#Snare {
-  top: 35%;
-  left: 27%;
-}
-#Tom-high {
-  top: 20%;
-  left: 35%;
-}
-#Tom-low {
-  top: 20%;
-  left: 50%;
-}
-#Tom-mid {
-  top: 35%;
-  left: 55%;
-}
-#Grabar {
-  top: 3%;
-  left: 50%;
 }
 
 footer {
@@ -105,6 +59,170 @@ footer {
 
 footer p {
   margin: 0 10px;
+}
+
+.melody-button,
+.rec-button,
+.rep-button,
+.tecla,
+.key-button {
+  position: absolute;
+}
+
+#grabar {
+  bottom: 13%;
+  right: 2%;
+}
+
+#reproducir {
+  bottom: 2%;
+  right: 2%;
+}
+
+#teclado {
+  bottom: 2%;
+  left: 2%;
+}
+
+/* BOTONES OCULTOS*/
+
+#crash {
+  top: 7%;
+  left: 20%;
+}
+#close {
+  top: 60%;
+  left: 15%;
+}
+#open {
+  top: 23%;
+  left: 10%;
+}
+#kick {
+  top: 42%;
+  left: 43%;
+}
+#ride {
+  top: 25%;
+  left: 75%;
+}
+#snare {
+  top: 35%;
+  left: 27%;
+}
+#tom-high {
+  top: 20%;
+  left: 35%;
+}
+#tom-low {
+  top: 20%;
+  left: 50%;
+}
+#tom-mid {
+  top: 35%;
+  left: 55%;
+}
+
+/* usar TECLADO */
+
+#crashQ {
+  top: 7%;
+  left: 20%;
+  background-color: red;
+  padding: 1rem;
+  border-radius: 2rem;
+  border-radius: 10px;
+}
+
+#closeW {
+  top: 60%;
+  left: 15%;
+  background-color: red;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+#openE {
+  top: 23%;
+  left: 10%;
+  background-color: red;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+#kickR {
+  top: 42%;
+  left: 43%;
+  background-color: red;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+#rideT {
+  top: 25%;
+  left: 75%;
+  background-color: red;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+#snareU {
+  top: 35%;
+  left: 27%;
+  background-color: red;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+#tom-highI {
+  top: 20%;
+  left: 35%;
+  background-color: red;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+#tom-lowO {
+  top: 20%;
+  left: 50%;
+  background-color: red;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+#tom-midP {
+  top: 35%;
+  left: 55%;
+  background-color: red;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+/* Caja de INICIO */
+
+.instrucciones div {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.instrucciones {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  backdrop-filter: blur(8px);
+  z-index: 9999;
+}
+
+.ocultar {
+  display: none;
+}
+
+.mostrar {
+  display: block;
 }
 
 @media (min-width: 600px) {
