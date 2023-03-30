@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap");
+
+body {
+  font-family: "Metal Mania", Impact, Haettenschweiler, sans-serif;
+}
+
+header {
+  background-color: #a084dc;
+  letter-spacing: 7px;
+  font-size: 30px;
+}
+
+main {
+  background-color: #ebc7e6;
+}
+
+section {
+  background-color: #645cbb;
+}
+
+.melody-button {
+  background-color: #bface2;
+  font-family: "Metal Mania", Impact, Haettenschweiler, sans-serif;
+  padding: 7px;
+  border-width: 0;
+  border-radius: 2rem;
+}
+
+#grabar,
+#reproducir,
+#teclado {
+  background-color: white;
+  font-family: "Metal Mania", Impact, Haettenschweiler, sans-serif;
+  font-size: 20px;
+  padding: 10px;
+  border-width: 0;
+  border-radius: 2rem;
+  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+  background-color: #a084dc;
+}
+
+/* Caja de INICIO */
+
+.instrucciones div {
+  background-color: #a084dc;
+  padding: 20px;
+  border-width: 0;
+  border-radius: 2rem;
+  box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.2);
+}
+
+.instrucciones {
+  background-color: #ebc7e63a;
+}
+
+#comenzar {
+  font-size: 12px;
+  background-color: #ebc7e6;
+  font-family: "Metal Mania", Impact, Haettenschweiler, sans-serif;
+  font-size: 20px;
+  padding: 10px;
+  margin-top: 1rem;
+  border-width: 0;
+  border-radius: 2rem;
+  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Animación GRABAR */
+
+.recButton {
+  width: 25px;
+  height: 25px;
+  font-size: 0;
+  background-color: black;
+  border: 0;
+  border-radius: 35px;
+  outline: none;
+  float: right;
+  margin-left: 0.5rem;
+}
+
+.notRec {
+  background-color: black;
+}
+
+.Rec {
+  animation-name: pulse;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: black;
+  }
+  50% {
+    background-color: red;
+  }
+  100% {
+    background-color: black;
+  }
+}
+/* Animación REPRODUCIR */
+
+.repButton {
+  width: 25px;
+  height: 25px;
+  font-size: 0;
+  background-color: black;
+  border: 0;
+  border-radius: 35px;
+  outline: none;
+  float: right;
+  margin-left: 0.5rem;
+}
+
+.notRep {
+  background-color: black;
+}
+
+.Rep {
+  animation-name: reproduciendo;
+  animation-duration: 5s;
+}
+
+@keyframes reproduciendo {
+  0% {
+    background-color: green;
+  }
+}
+
+@media (min-width: 600px) {
+  main {
+    background-color: #bface2;
+  }
+  section {
+    background-color: pink;
+    cursor: url(cursor1.png), auto;
+  }
+
+  .melody-button,
+  .rec-button,
+  .rep-button,
+  .key-button {
+    cursor: url(cursor1.png), auto;
+  }
+}
