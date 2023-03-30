@@ -111,12 +111,12 @@ reproducirButton.addEventListener("click", function () {
 
 //TECLADO O RATÓN
 
-let boton = document.getElementById("teclado");
+let teclado = document.getElementById("teclado");
 let estado = false;
 
-boton.addEventListener("click", function () {
+teclado.addEventListener("click", function () {
   estado = !estado;
-  boton.innerHTML = estado ? "Usar ratón" : "Usar teclado";
+  teclado.innerHTML = estado ? "Usar ratón" : "Usar teclado";
   let teclas = document.getElementsByClassName("tecla");
   for (let i = 0; i < teclas.length; i++) {
     teclas[i].classList.toggle("ocultar");
