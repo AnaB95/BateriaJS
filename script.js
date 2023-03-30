@@ -1,23 +1,39 @@
 "use strict";
 
 //  BOTONES MELODIA
-let melodyButtons = document.querySelectorAll(".melody-button");
 
-// Agregar un controlador de eventos onclick a cada botón
+let melodyButtons = document.querySelectorAll(".melody-button");
+//creamos una funcion con argumentos audio y  tiempo de retraso
+function reproducirConRetraso(audio, tiempo) {
+  // metodo setTimeout retrasa la ejecucion de  la funcion hasta  que no transcurra el tiempo(1000)
+  setTimeout(function () {
+    audio.play();
+  }, tiempo);
+}
+// Agrego un controlador de eventos onclick a cada botón
 melodyButtons.forEach(function (button) {
   button.onclick = function () {
-    // Crear un objeto de audio y establecer su propiedad src en la ruta del archivo de sonido correspondiente
+    //cuando click en boton nuevo objeto de audio
     let audio = new Audio(button.getAttribute("src"));
-    // Reproducir el sonido
-    //metodo setTimeout dos argumentos funcion para ejecutar el retraso y tiempo de retraso
-    setTimeout(function () {
-      audio.play();
-    }, 1000);
+    //se llama a la funcion para reprodicir el sonido con retraso 1000
+    reproducirConRetraso(audio, 500);
   };
 });
 
+//////////////////////////////////////////////////////////////////////////////////
+//BOTON REDOBLE EMPEZAR
+//CREAMOS VARIABLE BOTON
+//CREAMOS NUEVO ELEMENTO CON ETIQUETA DE AUDIO
+let boton = document.querySelector(".comenzar");
+let audioEtiqueta = document.querySelector("audio");
+//VARIBLE BOTON, LE DAMOS LISTENER AL EVENTO CLICK
+//ETIQUETA AUDIO LE ESTABLECEMOS EL ATRIBUTO SRC DONDE EL NAVAEGADOR LEE EL AUDIO
+//ETIQUETA AUDIO LE DAMOS ACCESO AL METODO PLAY
 
-
+boton.addEventListener("click", () => {
+  audioEtiqueta.setAttribute("src", "../Sonidos/redoble.mp3");
+  audioEtiqueta.play();
+});
 
 ////////////////////////////////////////////////////////////////////////////////
 //EVENTO DE TECLADO
@@ -26,34 +42,84 @@ melodyButtons.forEach(function (button) {
 function reproducirMelodia(tecla) {
   //crea nuevo audio con la ruta del archivo
   let audio = new Audio("Sonidos/" + tecla);
-  //play para reproducir el archivo de audio
-  //metodo setTimeout dos argumentos funcion para ejecutar el retraso y tiempo de retraso
-  setTimeout(function () {
-    audio.play();
-  }, 1000);
-  console.log("Estas reproduciendo la melodía de la tecla " + tecla);
+  //llamamos a la funcion reproducir con retraso que tiene el setTimeout
+  reproducirConRetraso(audio, 500);
 }
 //cuando se presiona una tecla EventListener llama a reproducir la melodia
 document.addEventListener("keydown", function (event) {
-
   if (event.key.toLowerCase() === "q") {
-    reproducirMelodia("/crash.wav");
+    reproducirMelodia("../Sonidos/crash.wav");
   } else if (event.key.toLowerCase() === "w") {
-    reproducirMelodia("/hihat-close.wav");
+    reproducirMelodia("../Sonidos/hihat-close.wav");
   } else if (event.key.toLowerCase() === "e") {
-    reproducirMelodia("/hihat-open.wav");
+    reproducirMelodia("../Sonidos/hihat-open.wav");
   } else if (event.key.toLowerCase() === "r") {
-    reproducirMelodia("/kick.wav");
+    reproducirMelodia("../Sonidos/kick.wav");
   } else if (event.key.toLowerCase() === "t") {
-    reproducirMelodia("/Ride.wav");
+    reproducirMelodia("../Sonidos/ride.wav");
   } else if (event.key.toLowerCase() === "u") {
-    reproducirMelodia("/Snare.wav");
+    reproducirMelodia("../Sonidos/snare.wav");
   } else if (event.key.toLowerCase() === "i") {
-    reproducirMelodia("/Tom-high.wav");
+    reproducirMelodia("../Sonidos/tom-high.wav");
   } else if (event.key.toLowerCase() === "o") {
-    reproducirMelodia("/Tom-low.wav");
+    reproducirMelodia("../Sonidos/tom-low.wav");
   } else if (event.key.toLowerCase() === "p") {
-    reproducirMelodia("/Tom-mid.wav");
+    reproducirMelodia("../Sonidos/tom-mid.wav");
   }
 });
 
+//Pantalla INICIO
+
+let botonComenzar = document.getElementById("comenzar");
+let instrucciones = document.querySelector(".instrucciones");
+let contenido = document.getElementById("contenido");
+
+botonComenzar.addEventListener("click", function () {
+  instrucciones.classList.add("ocultar");
+  contenido.classList.remove("ocultar");
+});
+
+//ANIMACIÓN GRABAR Y REPRODUCIR
+
+let recButton = document.getElementById("recButton");
+let grabarButton = document.getElementById("grabar");
+
+grabarButton.addEventListener("click", function () {
+  if (recButton.classList.contains("Rec")) {
+    recButton.classList.remove("Rec");
+    recButton.classList.add("notRec");
+    recButton.classList.add("recButton");
+  } else {
+    recButton.classList.remove("notRec");
+    recButton.classList.add("Rec");
+  }
+});
+
+let repButton = document.getElementById("repButton");
+let reproducirButton = document.getElementById("reproducir");
+
+reproducirButton.addEventListener("click", function () {
+  if (repButton.classList.contains("Rep")) {
+    repButton.classList.remove("Rep");
+    repButton.classList.add("notRep");
+    repButton.classList.add("repButton");
+  } else {
+    repButton.classList.remove("notRep");
+    repButton.classList.add("Rep");
+  }
+});
+
+//TECLADO O RATÓN
+
+let teclado = document.getElementById("teclado");
+let estado = false;
+
+teclado.addEventListener("click", function () {
+  estado = !estado;
+  teclado.innerHTML = estado ? "Usar ratón" : "Usar teclado";
+  let teclas = document.getElementsByClassName("tecla");
+  for (let i = 0; i < teclas.length; i++) {
+    teclas[i].classList.toggle("ocultar");
+    teclas[i].classList.toggle("mostrar");
+  }
+});

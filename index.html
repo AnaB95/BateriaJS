@@ -1,43 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <link rel="icon" type="image/jpg" href="extras/favicon1.png" />
+    <title>Batería en JavaScript</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="style.css" rel="stylesheet" />
-  <title>Batería en JavaScript</title>
-</head>
+  <body>
+    <div class="instrucciones">
+      <div>
+        <h1>¡Conviértete en baterista!</h1>
+        <p>
+          Clicka con el ratón en las partes de la batería o utiliza las teclas
+          de tu teclado para emitir diferentes sonidos.
+        </p>
+        <button id="comenzar" class="comenzar">Let's go!</button>
+        <audio src="Sonidos/redoble.mp3"></audio>
+      </div>
+    </div>
 
-<body>
-  <header>
-    <h1>Bateria</h1>
-  </header>
-  <main>
-    <section class="button-contaniner">
-      <img src="BateriaJS.png" alt="Batería">
-      <button class="melody-button" id="Crash" src="Sonidos/crash.wav">Crash</button>
-      <button class="melody-button" id="Close" src="Sonidos/hihat-close.wav">Close</button>
-      <button class="melody-button" id="Open" src="Sonidos/hihat-open.wav">Open</button>
-      <button class="melody-button" id="Kick" src="Sonidos/kick.wav">Kick</button>
-      <button class="melody-button" id="Ride" src="Sonidos/ride.wav">Ride</button>
-      <button class="melody-button" id="Snare" src="Sonidos/snare.wav">Snare</button>
-      <button class="melody-button" id="Tom-high" src="Sonidos/tom-high.wav">Tom-high</button>
-      <button class="melody-button" id="Tom-low" src="Sonidos/tom-low.wav">Tom-low</button>
-      <button class="melody-button" id="Tom-mid" src="Sonidos/tom-mid.wav">Tom-mid</button>
-      <button class="melody-button" id="Grabar">Grabar</button>
-      <audio id="audio"></audio>
-    </section>
-  </main>
-  <footer>
-    <p>
-      Mónica Irimia, Ignacio Chiacchiera y Ana Belén Bernárdez Martínez para HACK A BOSS en 2023
-    </p>
-  </footer>
+    <header>
+      <h1>BADUM TSS</h1>
+    </header>
+    <main>
+      <section class="button-contaniner">
+        <img src="BateriaJS.png" alt="Batería" id="bateria" />
+        <button class="melody-button" id="crash" src="Sonidos/crash.wav">
+          Crash
+        </button>
+        <button class="melody-button" id="close" src="Sonidos/hihat-close.wav">
+          Close
+        </button>
+        <button class="melody-button" id="open" src="Sonidos/hihat-open.wav">
+          Open
+        </button>
+        <button class="melody-button" id="kick" src="Sonidos/kick.wav">
+          Kick
+        </button>
+        <button class="melody-button" id="ride" src="Sonidos/ride.wav">
+          Ride
+        </button>
+        <button class="melody-button" id="snare" src="Sonidos/snare.wav">
+          Snare
+        </button>
+        <button class="melody-button" id="tom-high" src="Sonidos/tom-high.wav">
+          Tom-high
+        </button>
+        <button class="melody-button" id="tom-low" src="Sonidos/tom-low.wav">
+          Tom-low
+        </button>
+        <button class="melody-button" id="tom-mid" src="Sonidos/tom-mid.wav">
+          Tom-mid
+        </button>
+        <button class="rec-button" id="grabar">
+          Grabar
+          <div id="recButton" class="recButton"></div>
+        </button>
+        <button class="rep-button" id="reproducir">
+          Reproducir
+          <div id="repButton" class="repButton"></div>
+        </button>
+        <button class="key-button" id="teclado">Usar teclado</button>
+        <audio>
+          <source src="Sonidos/" type="audio/wav" />
+        </audio>
+        <div class="tecla ocultar" id="crashQ">Q</div>
+        <div class="tecla ocultar" id="openE">E</div>
+        <div class="tecla ocultar" id="closeW">W</div>
+        <div class="tecla ocultar" id="snareU">U</div>
+        <div class="tecla ocultar" id="tom-highI">I</div>
+        <div class="tecla ocultar" id="kickR">R</div>
+        <div class="tecla ocultar" id="tom-lowO">O</div>
+        <div class="tecla ocultar" id="tom-midP">P</div>
+        <div class="tecla ocultar" id="rideT">T</div>
+      </section>
+    </main>
+    <footer>
+      <p>
+        Mónica Irimia, Ignacio Chiacchiera y Ana Belén Bernárdez Martínez para
+        HACK A BOSS en 2023
+      </p>
+    </footer>
 
-  <script src="script.js" type="module"></script>
-
-</body>
-
+    <script src="script.js" type="module"></script>
+  </body>
 </html>
-
