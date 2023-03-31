@@ -30,8 +30,6 @@ main {
 }
 
 section {
-  border-radius: 2rem;
-  backdrop-filter: blur(5px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,6 +59,8 @@ footer p {
   margin: 0 10px;
 }
 
+/* BOTONES */
+
 .melody-button,
 .rec-button,
 .rep-button,
@@ -69,133 +69,145 @@ footer p {
   position: absolute;
 }
 
+.tecla {
+  z-index: 1;
+}
+
 #grabar {
-  bottom: 13%;
-  right: 2%;
+  bottom: 5%;
+  right: 35%;
 }
 
 #reproducir {
-  bottom: 2%;
-  right: 2%;
+  bottom: 5%;
+  right: 3%;
 }
 
 #teclado {
-  bottom: 2%;
+  bottom: 5%;
   left: 2%;
 }
 
-/* BOTONES OCULTOS*/
+/* BOTONES de sonidos OCULTOS*/
+
+.melody-button {
+  background: transparent;
+  border: none;
+  z-index: 2;
+}
 
 #crash {
   top: 7%;
-  left: 20%;
+  left: 13%;
+  border-radius: 50%;
+  width: 26%;
+  height: 12%;
+  transform: rotate(15deg);
 }
+
 #close {
   top: 60%;
-  left: 15%;
+  left: 13%;
+  border-radius: 5%;
+  width: 8%;
+  height: 14%;
 }
 #open {
-  top: 23%;
-  left: 10%;
+  top: 29%;
+  left: 8%;
+  border-radius: 50%;
+  width: 18%;
+  height: 8%;
 }
 #kick {
-  top: 42%;
-  left: 43%;
+  top: 34%;
+  left: 34%;
+  border-radius: 100%;
+  width: 35%;
+  height: 35%;
 }
 #ride {
-  top: 25%;
-  left: 75%;
+  top: 16%;
+  left: 68%;
+  border-radius: 50%;
+  width: 29%;
+  height: 17%;
+  transform: rotate(-45deg);
 }
 #snare {
-  top: 35%;
-  left: 27%;
+  top: 38%;
+  left: 20%;
+  border-radius: 5%;
+  width: 16%;
+  height: 8%;
 }
 #tom-high {
-  top: 20%;
-  left: 35%;
+  top: 22%;
+  left: 26%;
+  border-radius: 10%;
+  width: 19%;
+  height: 17%;
 }
 #tom-low {
-  top: 20%;
-  left: 50%;
+  top: 22%;
+  left: 53%;
+  border-radius: 10%;
+  width: 19%;
+  height: 17%;
 }
 #tom-mid {
-  top: 35%;
-  left: 55%;
+  top: 40%;
+  left: 67%;
+  border-radius: 10%;
+  width: 20%;
+  height: 24%;
 }
 
 /* usar TECLADO */
 
 #crashQ {
-  top: 7%;
-  left: 20%;
-  background-color: red;
-  padding: 1rem;
-  border-radius: 2rem;
-  border-radius: 10px;
+  top: 5%;
+  left: 22%;
 }
 
 #closeW {
-  top: 60%;
-  left: 15%;
-  background-color: red;
-  padding: 1rem;
-  border-radius: 10px;
+  top: 63%;
+  left: 14%;
 }
 
 #openE {
-  top: 23%;
-  left: 10%;
-  background-color: red;
-  padding: 1rem;
-  border-radius: 10px;
+  top: 25%;
+  left: 8%;
 }
 
 #kickR {
-  top: 42%;
-  left: 43%;
-  background-color: red;
-  padding: 1rem;
-  border-radius: 10px;
+  top: 47%;
+  left: 48%;
 }
 
 #rideT {
-  top: 25%;
-  left: 75%;
-  background-color: red;
-  padding: 1rem;
-  border-radius: 10px;
+  top: 17%;
+  left: 79%;
 }
 
 #snareU {
-  top: 35%;
-  left: 27%;
-  background-color: red;
-  padding: 1rem;
-  border-radius: 10px;
+  top: 40%;
+  left: 21%;
 }
 
 #tom-highI {
-  top: 20%;
-  left: 35%;
-  background-color: red;
-  padding: 1rem;
-  border-radius: 10px;
+  top: 28%;
+  left: 33%;
 }
 
 #tom-lowO {
-  top: 20%;
-  left: 50%;
-  background-color: red;
-  padding: 1rem;
-  border-radius: 10px;
+  top: 27%;
+  left: 59%;
 }
 
 #tom-midP {
-  top: 35%;
-  left: 55%;
-  background-color: red;
-  padding: 1rem;
-  border-radius: 10px;
+  top: 47%;
+  left: 71%;
 }
 
 /* Caja de INICIO */
@@ -243,8 +255,19 @@ footer p {
     width: 80vh;
   }
 
-  .melody-button {
-    position: absolute;
+  #grabar {
+    bottom: 5%;
+    right: 35%;
+  }
+
+  #reproducir {
+    bottom: 5%;
+    right: 5%;
+  }
+
+  #teclado {
+    bottom: 5%;
+    left: 5%;
   }
 
   footer {

@@ -116,7 +116,7 @@ let estado = false;
 
 teclado.addEventListener("click", function () {
   estado = !estado;
-  teclado.innerHTML = estado ? "Usar ratón" : "Usar teclado";
+  teclado.innerHTML = estado ? "USAR RATON" : "USAR TECLADO";
   let teclas = document.getElementsByClassName("tecla");
   for (let i = 0; i < teclas.length; i++) {
     teclas[i].classList.toggle("ocultar");
