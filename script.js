@@ -5,7 +5,6 @@
 let melodyButtons = document.querySelectorAll(".melody-button");
 
 function reproducirConRetraso(audio, tiempo) {
-  
   setTimeout(function () {
     audio.play();
   }, tiempo);
@@ -18,34 +17,24 @@ melodyButtons.forEach(function (button) {
   };
 });
 
-
-
-
-
-
-
 //BOTON REDOBLE EMPEZAR
 
 let boton = document.querySelector(".comenzar");
 let audioEtiqueta = document.querySelector("audio");
 
 boton.addEventListener("click", () => {
-  audioEtiqueta.setAttribute("src", "../Sonidos/redoble.mp3");
+  audioEtiqueta.setAttribute("src", "../Sonidos/redoble.wav");
   audioEtiqueta.play();
 });
-
 
 //EVENTO DE TECLADO
 let audioArray = [];
 function reproducirMelodia(tecla) {
   let audio = new Audio("Sonidos/" + tecla);
   audioArray.push(audio);
-
 }
 
-
 document.addEventListener("keydown", function (event) {
-
   if (event.key.toLowerCase() === "q") {
     reproducirMelodia("../Sonidos/crash.wav");
   } else if (event.key.toLowerCase() === "w") {
@@ -66,7 +55,6 @@ document.addEventListener("keydown", function (event) {
     reproducirMelodia("../Sonidos/tom-mid.wav");
   }
 
-  
   if (audioArray.length > 0) {
     let delay = 500;
     audioArray.forEach(function (audio) {
@@ -74,7 +62,6 @@ document.addEventListener("keydown", function (event) {
     });
     audioArray = [];
   }
-
 });
 
 //Pantalla INICIO
