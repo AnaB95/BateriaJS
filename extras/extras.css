@@ -1,80 +1,94 @@
-@import url("https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Neucha&display=swap");
 
 body {
-  font-family: "Metal Mania", Impact, Haettenschweiler, sans-serif;
+  --mostaza: #ffcc32;
+  --pizarra: #1e1e24;
+  font-family: "Neucha", Impact, sans-serif;
 }
 
 header {
-  background-color: #a084dc;
-  letter-spacing: 7px;
-  font-size: 30px;
+  background-color: var(--pizarra);
+  letter-spacing: 10px;
+}
+
+header h1 {
+  color: var(--mostaza);
+  font-family: "East Sea Dokdo", Impact, sans-serif;
+  font-size: 3.5rem;
 }
 
 main {
-  background-color: #ebc7e6;
+  background-color: var(--mostaza);
 }
 
-section {
-  background-color: #645cbb;
+/* usar TECLADO */
+
+.tecla {
+  background-color: white;
+  padding: 0.3rem;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  border: solid 3px var(--pizarra);
+  font-family: "East Sea Dokdo", Impact, sans-serif;
+  font-size: 1rem;
 }
 
-.melody-button {
-  background-color: #bface2;
-  font-family: "Metal Mania", Impact, Haettenschweiler, sans-serif;
-  padding: 7px;
-  border-width: 0;
-  border-radius: 2rem;
-}
+/* BOTONES */
 
 #grabar,
 #reproducir,
-#teclado {
+#teclado,
+#comenzar {
   background-color: white;
-  font-family: "Metal Mania", Impact, Haettenschweiler, sans-serif;
-  font-size: 20px;
-  padding: 10px;
-  border-width: 0;
-  border-radius: 2rem;
-  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.2);
+  font-family: "East Sea Dokdo", Impact, sans-serif;
+  font-size: 15px;
+  padding: 0.1rem 0.1rem;
+  transition: all 0.2s ease;
+  box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  border: solid 4px var(--pizarra);
+  color: var(--pizarra);
+}
+
+#grabar:hover,
+#reproducir:hover,
+#teclado:hover,
+#comenzar:hover {
+  box-shadow: none;
 }
 
 footer {
-  background-color: #a084dc;
+  background-color: var(--pizarra);
+  color: var(--mostaza);
 }
 
 /* Caja de INICIO */
 
 .instrucciones div {
-  background-color: #a084dc;
-  padding: 20px;
-  border-width: 0;
-  border-radius: 2rem;
-  box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.2);
+  background-color: var(--mostaza);
+  padding: 2rem;
+  box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  font-size: 1rem;
 }
 
-.instrucciones {
-  background-color: #ebc7e63a;
+.instrucciones h1,
+.instrucciones p {
+  color: var(--pizarra);
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
 
 #comenzar {
-  font-size: 12px;
-  background-color: #ebc7e6;
-  font-family: "Metal Mania", Impact, Haettenschweiler, sans-serif;
-  font-size: 20px;
-  padding: 10px;
-  margin-top: 1rem;
-  border-width: 0;
-  border-radius: 2rem;
-  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.2);
+  font-size: 2rem;
 }
 
 /* Animación GRABAR */
 
 .recButton {
-  width: 25px;
-  height: 25px;
+  width: 1rem;
+  height: 1rem;
   font-size: 0;
-  background-color: black;
+  background-color: var(--pizarra);
   border: 0;
   border-radius: 35px;
   outline: none;
@@ -83,7 +97,7 @@ footer {
 }
 
 .notRec {
-  background-color: black;
+  background-color: var(--pizarra);
 }
 
 .Rec {
@@ -95,22 +109,22 @@ footer {
 
 @keyframes pulse {
   0% {
-    background-color: black;
+    background-color: var(--pizarra);
   }
   50% {
-    background-color: red;
+    background-color: rgb(255, 0, 0);
   }
   100% {
-    background-color: black;
+    background-color: var(--pizarra);
   }
 }
 /* Animación REPRODUCIR */
 
 .repButton {
-  width: 25px;
-  height: 25px;
+  width: 1rem;
+  height: 1rem;
   font-size: 0;
-  background-color: black;
+  background-color: var(--pizarra);
   border: 0;
   border-radius: 35px;
   outline: none;
@@ -119,7 +133,7 @@ footer {
 }
 
 .notRep {
-  background-color: black;
+  background-color: var(--pizarra);
 }
 
 .Rep {
@@ -129,23 +143,53 @@ footer {
 
 @keyframes reproduciendo {
   0% {
-    background-color: green;
+    background-color: rgb(77, 236, 77);
+  }
+  20% {
+    background-color: rgb(77, 236, 77);
   }
 }
 
 @media (min-width: 600px) {
-  main {
-    background-color: #bface2;
+  header {
+    background-color: var(--mostaza);
   }
+
+  header h1 {
+    color: var(--pizarra);
+    font-size: 4.5rem;
+  }
+
+  main {
+    background-color: var(--pizarra);
+  }
+
   section {
-    background-color: pink;
-    cursor: url(cursor1.png), auto;
+    background-color: var(--mostaza);
+    cursor: url(cursor.png), auto;
+    box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
   }
 
   .melody-button,
   .rec-button,
   .rep-button,
   .key-button {
-    cursor: url(cursor1.png), auto;
+    cursor: url(cursor.png), auto;
+  }
+
+  .tecla {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  #grabar,
+  #reproducir,
+  #teclado {
+    font-size: 1.5rem;
+  }
+
+  footer {
+    color: var(--mostaza);
   }
 }
