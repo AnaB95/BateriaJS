@@ -1,4 +1,4 @@
-# BATERÍA EN JAVASCRIPT
+# BATERÍA EN JAVASCRIPT 🥁✨
 _Primer proyecto para HACK A BOSS - 2023: Juego que permite usando el teclado simular una batería asociando un sonido a teclas._
 ## Requisitos 📋
 * El juego debe mostrar diversos botones asociados visualmente a una batería.
