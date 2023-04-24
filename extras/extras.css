@@ -34,8 +34,6 @@ main {
 
 /* BOTONES */
 
-#grabar,
-#reproducir,
 #teclado,
 #comenzar {
   background-color: white;
@@ -49,11 +47,13 @@ main {
   color: var(--pizarra);
 }
 
-#grabar:hover,
-#reproducir:hover,
 #teclado:hover,
 #comenzar:hover {
   box-shadow: none;
+}
+
+#teclado {
+  font-size: 2.5rem;
 }
 
 footer {
@@ -82,74 +82,6 @@ footer {
   font-size: 2rem;
 }
 
-/* Animación GRABAR */
-
-.recButton {
-  width: 1rem;
-  height: 1rem;
-  font-size: 0;
-  background-color: var(--pizarra);
-  border: 0;
-  border-radius: 35px;
-  outline: none;
-  float: right;
-  margin-left: 0.5rem;
-}
-
-.notRec {
-  background-color: var(--pizarra);
-}
-
-.Rec {
-  animation-name: pulse;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-
-@keyframes pulse {
-  0% {
-    background-color: var(--pizarra);
-  }
-  50% {
-    background-color: rgb(255, 0, 0);
-  }
-  100% {
-    background-color: var(--pizarra);
-  }
-}
-/* Animación REPRODUCIR */
-
-.repButton {
-  width: 1rem;
-  height: 1rem;
-  font-size: 0;
-  background-color: var(--pizarra);
-  border: 0;
-  border-radius: 35px;
-  outline: none;
-  float: right;
-  margin-left: 0.5rem;
-}
-
-.notRep {
-  background-color: var(--pizarra);
-}
-
-.Rep {
-  animation-name: reproduciendo;
-  animation-duration: 5s;
-}
-
-@keyframes reproduciendo {
-  0% {
-    background-color: rgb(77, 236, 77);
-  }
-  20% {
-    background-color: rgb(77, 236, 77);
-  }
-}
-
 @media (min-width: 600px) {
   header {
     background-color: var(--mostaza);
@@ -172,8 +104,6 @@ footer {
   }
 
   .melody-button,
-  .rec-button,
-  .rep-button,
   .key-button {
     cursor: url(cursor.png), auto;
   }
@@ -183,10 +113,8 @@ footer {
     font-size: 1.5rem;
   }
 
-  #grabar,
-  #reproducir,
   #teclado {
-    font-size: 1.5rem;
+    font-size: 3rem;
   }
 
   footer {
