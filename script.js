@@ -28,6 +28,7 @@ boton.addEventListener("click", () => {
 });
 
 //EVENTO DE TECLADO
+
 let audioArray = [];
 function reproducirMelodia(tecla) {
   let audio = new Audio("Sonidos/" + tecla);
@@ -73,36 +74,6 @@ let contenido = document.getElementById("contenido");
 botonComenzar.addEventListener("click", function () {
   instrucciones.classList.add("ocultar");
   contenido.classList.remove("ocultar");
-});
-
-//ANIMACIÓN GRABAR Y REPRODUCIR
-
-let recButton = document.getElementById("recButton");
-let grabarButton = document.getElementById("grabar");
-
-grabarButton.addEventListener("click", function () {
-  if (recButton.classList.contains("Rec")) {
-    recButton.classList.remove("Rec");
-    recButton.classList.add("notRec");
-    recButton.classList.add("recButton");
-  } else {
-    recButton.classList.remove("notRec");
-    recButton.classList.add("Rec");
-  }
-});
-
-let repButton = document.getElementById("repButton");
-let reproducirButton = document.getElementById("reproducir");
-
-reproducirButton.addEventListener("click", function () {
-  if (repButton.classList.contains("Rep")) {
-    repButton.classList.remove("Rep");
-    repButton.classList.add("notRep");
-    repButton.classList.add("repButton");
-  } else {
-    repButton.classList.remove("notRep");
-    repButton.classList.add("Rep");
-  }
 });
 
 //TECLADO O RATÓN
