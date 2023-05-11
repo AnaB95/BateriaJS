@@ -10,6 +10,6 @@ _Primer proyecto para HACK A BOSS - 2023: Juego que permite usando el ratón o e
 * Existe un sonido de redoble al comenzar el juego, en el deploy no se reproduce aunque si lo hace en todas las pruebas hechas.
 * En vez de una imagen se puede dar diseño individual a cada botón representando cada elemento de la batería con la idea de añadir en un futuro animaciones.
 ## Autores
-* - [@AnaBelenBernardez](https://github.com/AnaBelenBernardez)
-* - [@moirivilla](https://github.com/moirivilla)
-* - [@chiacchierai](https://github.com/chiacchierai)
+* [@AnaBelenBernardez](https://github.com/AnaBelenBernardez)
+* [@moirivilla](https://github.com/moirivilla)
+* [@chiacchierai](https://github.com/chiacchierai)
