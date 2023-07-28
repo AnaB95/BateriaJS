@@ -7,10 +7,9 @@ _Primer proyecto para HACK A BOSS - 2023: Juego que permite usando el ratón o e
 * Cada botón también debe tener una tecla del teclado asociada que haría el mismo efecto que pulsarlo.
 * Se puede añadir un retardo de unos milisegundos a cada sonido para hacerlo más realista.
 
-## ⚙️ A mejorar 
-* Bonus: Añadir un botón de grabar que permita grabar una secuencia de sonidos y reproducirla posteriormente.
-* Existe un sonido de redoble al comenzar el juego, en el deploy no se reproduce aunque si lo hace en todas las pruebas hechas.
-* En vez de una imagen se puede dar diseño individual a cada botón representando cada elemento de la batería con la idea de añadir en un futuro animaciones.
+![Imagen 1: Pantalla con instrucciones y un botón para comenzar.](https://raw.githubusercontent.com/anabelenbernardez/BateriaJS/main/extras/imagen1.png)
+![Imagen 2: App con batería y un botón donde se lee "Usar teclado".](https://raw.githubusercontent.com/anabelenbernardez/BateriaJS/main/extras/imagen2.png)
+![Imagen 3: App con batería y un botón donde se lee "Usar ratón".](https://raw.githubusercontent.com/anabelenbernardez/BateriaJS/main/extras/imagen3.png)
 
 ##  👩‍💻 Autores
 * [@AnaBelenBernardez](https://github.com/AnaBelenBernardez)
