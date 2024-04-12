@@ -1,6 +1,8 @@
 # 🥁 BATERÍA EN JAVASCRIPT 
 _Primer proyecto para HACK A BOSS - 2023: Juego que permite usando el ratón o el teclado simular los sonidos de una batería._
 
+[![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white)](https://youtu.be/ziQYQplqab8?si=wIiXjiPTCbbdUXMT)
+
 ##  👩‍💻 Autores
 * [@AnaBelenBernardez](https://github.com/AnaBelenBernardez)
 * [@moirivilla](https://github.com/moirivilla)
